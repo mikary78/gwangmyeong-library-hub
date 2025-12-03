@@ -1,15 +1,5 @@
 
-export interface LibraryData {
-    id: number;
-    name: string;
-    address: string;
-    phone: string;
-    type: string;
-    lat: number;
-    lng: number;
-}
-
-export const libraries: LibraryData[] = [
+const libraries = [
     {
         "id": 1,
         "name": "하늘꿈 작은도서관",
@@ -25,8 +15,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 너부대로35번길 20 (광명동) 광명5동행정복지센터",
         "phone": "02-2680-5009",
         "type": "공립",
-        "lat": 37.4787657,
-        "lng": 126.8475083
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 3,
@@ -34,8 +24,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 광화로 6 (광명동) 4층",
         "phone": "02-2625-7634",
         "type": "사립",
-        "lat": 37.4729906,
-        "lng": 126.8506886
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 4,
@@ -43,8 +33,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 오리로403번길 3 (소하동) 4층",
         "phone": "02-897-8937",
         "type": "사립",
-        "lat": 37.4376429,
-        "lng": 126.8763061
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 5,
@@ -52,8 +42,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 범안로 1061 (하안동) 우리 마을 작은 도서관 7층",
         "phone": "000-0000-0000",
         "type": "사립",
-        "lat": 37.4442544,
-        "lng": 126.8572894
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 6,
@@ -61,8 +51,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 도덕공원로 29 (소하동) 소하2동행정복지센터",
         "phone": "02-2680-5703",
         "type": "공립",
-        "lat": 37.4740393,
-        "lng": 126.8636967
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 7,
@@ -70,8 +60,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 도덕로 27 (하안동) 하안4동우체국 3층",
         "phone": "02-897-3357",
         "type": "사립",
-        "lat": 37.4686777,
-        "lng": 126.8524908
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 8,
@@ -79,8 +69,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 도덕로 83 (하안동) 흥안주공시범아파트",
         "phone": "02-497-4637",
         "type": "사립",
-        "lat": 37.4686777,
-        "lng": 126.8524908
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 9,
@@ -88,8 +78,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 도덕로 159 (하안동) 광문교회",
         "phone": "000-0000-0000",
         "type": "사립",
-        "lat": 37.4686777,
-        "lng": 126.8524908
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 10,
@@ -97,8 +87,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 도덕로 171-3 (하안동) 광명평생교육원",
         "phone": "02-011-0000",
         "type": "사립",
-        "lat": 37.4686777,
-        "lng": 126.8524908
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 11,
@@ -106,8 +96,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 디지털로 34 (철산동) 2층 1호",
         "phone": "02-897-8296",
         "type": "사립",
-        "lat": 37.4734703,
-        "lng": 126.8710901
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 12,
@@ -115,8 +105,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 범안로 919 (하안동) 5층 광명광성교회",
         "phone": "02-807-8339",
         "type": "사립",
-        "lat": 37.4591463,
-        "lng": 126.87374
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 13,
@@ -124,8 +114,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 범안로 1026 (하안동) 광명청소년수련관",
         "phone": "02-2617-9314",
         "type": "공립",
-        "lat": 37.4442544,
-        "lng": 126.8572894
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 14,
@@ -133,8 +123,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 범안로 1044 (하안동) 하안1동제1호공영주차장 3층",
         "phone": "02-2618-2060",
         "type": "사립",
-        "lat": 37.4416781,
-        "lng": 126.8411849
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 15,
@@ -142,8 +132,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 소하로 116 (소하동) GUU 능촌 매니저 아파트 113",
         "phone": "010-9913-9683",
         "type": "사립",
-        "lat": 37.4479579,
-        "lng": 126.8836578
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 16,
@@ -151,8 +141,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 소하로 127 (소하동) 하안종합사회복지관",
         "phone": "02-898-7223",
         "type": "사립",
-        "lat": 37.4463169,
-        "lng": 126.8938358
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 17,
@@ -169,8 +159,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 시청로 37 (철산동)",
         "phone": "02-2614-5815",
         "type": "사립",
-        "lat": 37.4869115,
-        "lng": 126.8669545
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 19,
@@ -178,8 +168,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 시청로 46 (철산동) 로데오빌딩 211호",
         "phone": "02-2684-6100",
         "type": "사립",
-        "lat": 37.4869115,
-        "lng": 126.8669545
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 20,
@@ -187,8 +177,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 오리로854번길 3 (하안동)",
         "phone": "02-897-6200",
         "type": "사립",
-        "lat": 37.4749491,
-        "lng": 126.8685365
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 21,
@@ -214,8 +204,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 38 (철산동) 철산초등학교",
         "phone": "02-2680-5819",
         "type": "공립",
-        "lat": 37.4767355,
-        "lng": 126.8700418
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 24,
@@ -223,8 +213,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 37 (철산동) 아트빌아파트상가201호",
         "phone": "02-897-7973",
         "type": "사립",
-        "lat": 37.4754089,
-        "lng": 126.867845
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 25,
@@ -232,8 +222,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 40 (철산동) 주공13단지 생활복지센터 내",
         "phone": "02-2619-0685",
         "type": "사립",
-        "lat": 37.4767355,
-        "lng": 126.8700418
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 26,
@@ -241,8 +231,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 42 (철산동) 조은별유치원",
         "phone": "02-2612-0202",
         "type": "사립",
-        "lat": 37.4767355,
-        "lng": 126.8700418
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 27,
@@ -250,8 +240,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 56 (철산동) 철산어린이집",
         "phone": "02-2683-2789",
         "type": "사립",
-        "lat": 37.4771161,
-        "lng": 126.8725282
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 28,
@@ -259,8 +249,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 철산로 70 (철산동) 철산3동 행정복지센터 내 2층",
         "phone": "02-2680-6006",
         "type": "공립",
-        "lat": 37.4767355,
-        "lng": 126.8700418
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 29,
@@ -304,8 +294,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 하안로 347 (소하동) 효성해링턴 플레이스 상가 지하1층",
         "phone": "02-2083-9143",
         "type": "사립",
-        "lat": 37.4438585,
-        "lng": 126.8940699
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 34,
@@ -313,8 +303,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 한내일로 40 (광명동) 밤일마을 작은도서관",
         "phone": "02-2060-5445",
         "type": "사립",
-        "lat": 37.4563443,
-        "lng": 126.8818969
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 35,
@@ -349,8 +339,8 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 호랭이거리 4 (소하동) 3층",
         "phone": "02-894-8600",
         "type": "사립",
-        "lat": 37.4762877,
-        "lng": 126.8522907
+        "lat": 0,
+        "lng": 0
     },
     {
         "id": 39,
@@ -385,7 +375,98 @@ export const libraries: LibraryData[] = [
         "address": "경기도 광명시 디지털로 34 31층 1호(철산동)",
         "phone": "02-2680-6575",
         "type": "사립",
-        "lat": 37.4734703,
-        "lng": 126.8710901
+        "lat": 0,
+        "lng": 0
     }
 ];
+
+async function fetchCoordinates() {
+    const results = [];
+    console.log(`Fetching coordinates for ${libraries.length} libraries...`);
+
+    for (const lib of libraries) {
+        try {
+            // Strategy 1: Full address
+            let query = lib['address'];
+            let lat = 0;
+            let lng = 0;
+
+            // Helper to fetch
+            const doFetch = async (q) => {
+                const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(q)}`;
+                const res = await fetch(url, {
+                    headers: { 'User-Agent': 'GwangmyeongLibraryHub/1.0' },
+                    signal: AbortSignal.timeout(5000)
+                });
+                if (!res.ok) throw new Error(res.statusText);
+                return await res.json();
+            };
+
+            let data = await doFetch(query);
+
+            if (data && data.length > 0) {
+                lat = parseFloat(data[0].lat);
+                lng = parseFloat(data[0].lon);
+                console.log(`[OK] ${lib['name']}: ${lat}, ${lng}`);
+            } else {
+                // Strategy 2: Remove parentheses and floor info
+                // e.g. "경기도 광명시 너부대로45번안길 20-19 (광명동) 2층" -> "경기도 광명시 너부대로45번안길 20-19"
+                let simple = query.replace(/\([^)]*\)/g, '').split(' ').filter(p => !p.includes('층') && !p.includes('호')).join(' ');
+
+                // Also remove building names if they are at the end
+                // This is heuristic. Let's just try to keep the first 4 parts if it's long
+                // "경기도 광명시 너부대로45번안길 20-19" is 4 parts.
+
+                console.log(`[Retry 1] ${lib['name']}: ${simple}`);
+                data = await doFetch(simple);
+
+                if (data && data.length > 0) {
+                    lat = parseFloat(data[0].lat);
+                    lng = parseFloat(data[0].lon);
+                    console.log(`  -> Found: ${lat}, ${lng}`);
+                } else {
+                    // Strategy 3: Just Road Name Address
+                    // Try to extract "경기도 광명시 [RoadName] [Number]"
+                    // Regex for "경기도 광명시" + anything until a number
+                    const match = query.match(/(경기도\s+광명시\s+\S+\s+\d+(?:-\d+)?)/);
+                    if (match) {
+                        const roadAddr = match[1];
+                        console.log(`[Retry 2] ${lib['name']}: ${roadAddr}`);
+                        data = await doFetch(roadAddr);
+                        if (data && data.length > 0) {
+                            lat = parseFloat(data[0].lat);
+                            lng = parseFloat(data[0].lon);
+                            console.log(`  -> Found: ${lat}, ${lng}`);
+                        } else {
+                            console.log(`  -> Failed`);
+                        }
+                    } else {
+                        console.log(`  -> Failed (No road address pattern)`);
+                    }
+                }
+            }
+
+            results.push({
+                id: lib['id'],
+                name: lib['name'],
+                address: lib['address'],
+                phone: lib['phone'],
+                type: lib['type'],
+                lat: lat,
+                lng: lng
+            });
+
+            await new Promise(r => setTimeout(r, 1100)); // Rate limit
+
+        } catch (error) {
+            console.error(`Error processing ${lib['name']}: ${error.message}`);
+            results.push({ ...lib, lat: 0, lng: 0 });
+        }
+    }
+
+    const fs = await import('fs');
+    fs.writeFileSync('libraries_with_coords_v2.json', JSON.stringify(results, null, 2), 'utf-8');
+    console.log('Saved to libraries_with_coords_v2.json');
+}
+
+fetchCoordinates();
