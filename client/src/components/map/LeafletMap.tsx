@@ -1,6 +1,7 @@
 'use client';
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LibraryData } from '../../data/libraries';
 import L from 'leaflet';
@@ -20,12 +21,28 @@ interface LeafletMapProps {
     libraries: LibraryData[];
 }
 
-export default function LeafletMap({ libraries }: LeafletMapProps) {
+export default function LeafletMap({ libraries, selectedLibrary }: LeafletMapProps & { selectedLibrary?: LibraryData | null }) {
     // Center of Gwangmyeong
     const center: [number, number] = [37.4786, 126.8647];
 
+    function MapController({ selectedLibrary }: { selectedLibrary?: LibraryData | null }) {
+        const map = useMap();
+
+        useEffect(() => {
+            if (selectedLibrary && selectedLibrary.lat !== 0 && selectedLibrary.lng !== 0) {
+                map.flyTo([selectedLibrary.lat, selectedLibrary.lng], 16, {
+                    animate: true,
+                    duration: 1.5
+                });
+            }
+        }, [selectedLibrary, map]);
+
+        return null;
+    }
+
     return (
         <MapContainer center={center} zoom={13} style={{ height: '100%', width: '100%' }}>
+            <MapController selectedLibrary={selectedLibrary} />
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

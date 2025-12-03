@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { libraries } from '../../data/libraries';
+import { libraries, LibraryData } from '../../data/libraries';
 
 // Dynamically import LeafletMap to avoid SSR issues
 const LeafletMap = dynamic(() => import('../../components/map/LeafletMap'), {
@@ -15,6 +15,7 @@ const LeafletMap = dynamic(() => import('../../components/map/LeafletMap'), {
 export default function LibrariesPage() {
     const [activeFilter, setActiveFilter] = useState('전체');
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedLibrary, setSelectedLibrary] = useState<LibraryData | null>(null);
 
     const filteredLibraries = useMemo(() => {
         return libraries.filter(lib => {
@@ -50,7 +51,12 @@ export default function LibrariesPage() {
 
                 <div className={styles.list}>
                     {filteredLibraries.map((lib) => (
-                        <div key={lib.id} className={`card ${styles.card}`}>
+                        <div
+                            key={lib.id}
+                            className={`card ${styles.card}`}
+                            onClick={() => setSelectedLibrary(lib)}
+                            style={{ cursor: 'pointer', border: selectedLibrary?.id === lib.id ? '2px solid var(--primary)' : undefined }}
+                        >
                             <h3 style={{ marginBottom: '0.5rem' }}>{lib.name}</h3>
                             <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
                                 {lib.address}
@@ -60,7 +66,7 @@ export default function LibrariesPage() {
                                 <span style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{lib.phone}</span>
                             </div>
                             <div style={{ marginTop: '1rem' }}>
-                                <Link href={`/libraries/${lib.id}`} className="btn btn-outline" style={{ width: '100%', padding: '0.5rem' }}>
+                                <Link href={`/libraries/${lib.id}`} className="btn btn-outline" style={{ width: '100%', padding: '0.5rem' }} onClick={(e) => e.stopPropagation()}>
                                     상세보기
                                 </Link>
                             </div>
@@ -70,7 +76,7 @@ export default function LibrariesPage() {
             </div>
 
             <div className={styles.mapContainer}>
-                <LeafletMap libraries={filteredLibraries} />
+                <LeafletMap libraries={filteredLibraries} selectedLibrary={selectedLibrary} />
             </div>
         </div>
     );
