@@ -8,34 +8,34 @@ export default function ProgramsPage() {
 
     // Mock Data
     const programs = [
-        { id: 1, title: 'Kids Storytelling', date: '2025-12-05', library: 'Library 1' },
-        { id: 2, title: 'Digital Literacy', date: '2025-12-12', library: 'Library 2' },
-        { id: 3, title: 'Book Club', date: '2025-12-15', library: 'Library 3' },
+        { id: 1, title: '어린이 동화 구연', date: '2025-12-05', library: '도서관 1' },
+        { id: 2, title: '디지털 리터러시 교육', date: '2025-12-12', library: '도서관 2' },
+        { id: 3, title: '독서 토론 모임', date: '2025-12-15', library: '도서관 3' },
     ];
 
     return (
         <div className={`container ${styles.container}`}>
             <div className={styles.header}>
-                <h1 className={styles.title}>Programs & Events</h1>
+                <h1 className={styles.title}>문화프로그램 & 행사</h1>
                 <div className={styles.viewToggle}>
                     <button
                         className={`${styles.toggleBtn} ${view === 'calendar' ? styles.active : ''}`}
                         onClick={() => setView('calendar')}
                     >
-                        Calendar
+                        달력보기
                     </button>
                     <button
                         className={`${styles.toggleBtn} ${view === 'list' ? styles.active : ''}`}
                         onClick={() => setView('list')}
                     >
-                        List
+                        목록보기
                     </button>
                 </div>
             </div>
 
             {view === 'calendar' ? (
                 <div className={styles.calendarGrid}>
-                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                    {['일', '월', '화', '수', '목', '금', '토'].map(day => (
                         <div key={day} className={styles.calendarHeader}>{day}</div>
                     ))}
                     {/* Mock Calendar Days (35 days) */}
@@ -68,7 +68,7 @@ export default function ProgramsPage() {
                             <p style={{ color: 'var(--muted)', marginBottom: '1rem' }}>
                                 {program.date} @ {program.library}
                             </p>
-                            <button className="btn btn-outline" style={{ width: '100%' }}>Register</button>
+                            <button className="btn btn-outline" style={{ width: '100%' }}>신청하기</button>
                         </div>
                     ))}
                 </div>

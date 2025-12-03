@@ -6,13 +6,13 @@ export default function Footer() {
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <div className={styles.brand}>
-                        <h3>Gwangmyeong Small Library Hub</h3>
-                        <p>Connecting citizens with knowledge and community.</p>
+                        <h3>광명시 작은도서관 통합 플랫폼</h3>
+                        <p>시민과 지식, 그리고 이웃을 잇는 우리 동네 커뮤니티</p>
                     </div>
                     <div className={styles.links}>
-                        <h4>Contact</h4>
-                        <p>Email: contact@gm-library.or.kr</p>
-                        <p>Phone: 02-1234-5678</p>
+                        <h4>문의처</h4>
+                        <p>이메일: contact@gm-library.or.kr</p>
+                        <p>전화: 02-1234-5678</p>
                     </div>
                 </div>
                 <div className={styles.copyright}>
